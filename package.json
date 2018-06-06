@@ -30,6 +30,13 @@
   "dependencies": {
     "@babel/core": "^7.0.0-beta.49",
     "@babel/preset-env": "^7.0.0-beta.49",
-    "tiny-ecs": "^2.0.0"
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "tiny-ecs": "^2.0.0",
+    "url-loader": "^1.0.1"
   }
 }
