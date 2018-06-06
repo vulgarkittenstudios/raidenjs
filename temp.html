@@ -9,21 +9,13 @@ src='file:///android_asset/app.js'></script>
     //Called after application is started.
     function OnStart()
     {
-        app.ShowPopup( "HTML Rocks!" );
+        
     }
-</script> <style>
-	body { background-color: #ffffff; }
-    .hello
-    {
-        font-size: 42;
-        width: 100%;
-        margin-top: 2em;
-        text-align: center;
-        color: blue;
-    }
-</style> <body onload="app.Start()">
-	<div class=hello> Hello World! 
-</div>
-	
+</script> 
+<body onload="app.Start()">
+	<div id="container">
+    <canvas id="screen"></canvas>
+  </div>
 </body>
+<script src="dist/bundle.js"/></script>
 </html>
