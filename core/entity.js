@@ -1,4 +1,4 @@
-const nextId = 0;
+
 export default class entity {
   /**
    * Basic component-driven object with facade functions for interacting with the
@@ -6,10 +6,11 @@ export default class entity {
    * @constructor
    */
   constructor() {
+  			this.nextId = 0;
     /**
      * Unique identifier.
      */
-    this.id = nextId++;
+    this.id = this.nextId++;
 
     /**
      * Ref to the manager for this facade, injected right after being
@@ -39,7 +40,7 @@ export default class entity {
    */
   __init() {
 
-    this.id                 = nextId++;
+    this.id                 = this.nextId++;
     this._manager           = null;
     this._Components.length = 0;
     this._tags.length       = 0;

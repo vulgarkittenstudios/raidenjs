@@ -76,7 +76,7 @@ export default class circle {
     this.radiusLine.y = this.y;
     this.radiusLine.vecX = this.radius;
 
-    this.radiusLine.draw('blue', ctx);
+    this.radiusLine.draw(ctx, 'blue');
 
   }
 }

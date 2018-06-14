@@ -15,6 +15,7 @@ import slice from '../graphics/slice';
 // Import Input Libraries
 import mouse from '../input/mouse';
 import keyboard from '../input/keyboard';
+import touch from '../input/touch';
 
 // Import Math Libraries
 import mathf from '../math/mathf';
@@ -61,6 +62,7 @@ engine.input = {};
 
 engine.input.mouse = mouse;
 engine.input.keyboard = keyboard;
+engine.input.touch = touch;
 
 // Math Namespace
 engine.math = {};

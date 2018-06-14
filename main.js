@@ -1,41 +1,49 @@
-// import './style.css';
+//import './assets/css/main.scss';
 import raiden from './core/raiden';
 
-const resources  = new raiden.graphics.resources();
-const entities = new raiden.core.entityManager();
-const win = new raiden.graphics.display({
-  resize: true
-});
-const loop = new raiden.core.loop();
+app.SetOrientation( "Portrait", () => {
+ setTimeout(() => {
+ 		const resources  = new raiden.graphics.resources();
+		const entities = new raiden.core.entityManager();
+		const win = new raiden.graphics.display();
 
-const run = false;
-win.init(() => {
+		const loop = new raiden.core.loop();
+
+		var run = false;
+
+		const flappySheetURL = "https://raw.githubusercontent.com/theallmightyjohnmanning/snm/master/flappy/spritesheet.png";
+		
+		const bird = entities.createEntity();
+		const pipes = entities.createEntity();
+		
+		bird.addTag('player');
+		pipes.addTag('obsticle');
+
+	var input = new raiden.input.touch();	
+		
+	win.init(() => {
+	
+		input.listenTo(window);
+  	resources.load([
+    	flappySheetURL
+  	]);
+
+  	resources.onReady(() => {
+    	run = true;
+  	});
   
-  resources.load([
-    
-  ]);
-
-  resources.onReady(() => {
-
-    hero.transform.position.x = hero.transform.position.y = 51;
-    run = true;
-  });
   
-  
-  loop.start();
-});
+  	loop.start();
+	});
 
-loop.onFixedTick((dt) => {
+	
+	loop.onFixedTick((dt) => {
   
-  if(run) {
-    
-    win.clear();
+  	if(run) {
+  		win.clear();
+  	}
+	});
 
-    const c = new raiden.physics.circle(
-      hero.transform.position.x, 
-      hero.transform.position.y, 
-      20
-    );
-    c.draw(win.ctx, 'red');
-  }
+
+ }, 50);
 });

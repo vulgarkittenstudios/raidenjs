@@ -16,12 +16,10 @@ export default class rectangle {
 
   pointTest(px, py) {
     var x, y;
-    if(arguments.length == 1) {
       
-      x = px.x;
-      y = px.y;
-      
-    }
+    x = (arguments.length == 2) ? px : px.x;
+    y = (arguments.length == 2) ? py : px.y;
+    
     if(x >= this.x && x <= this.x + this.w)
       if(y >= this.y && y <= this.y + this.h)
         return true;

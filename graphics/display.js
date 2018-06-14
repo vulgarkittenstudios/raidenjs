@@ -104,6 +104,7 @@ export default class {
         "width: 100%;" +
         "height: 100%;" + 
         "outline: 1px solid black;" +
+        "overflow: hidden;" +
     "}";
     document.body.appendChild(sheet);
 
