@@ -28,6 +28,7 @@
     "mini-css-extract-plugin": "^0.4.0",
     "packery": "^2.1.1",
     "postcss-loader": "^2.1.5",
+    "snapjs": "^1.2.1",
     "webpack": "^4.11.0",
     "webpack-dev-server": "^3.1.4"
   },
