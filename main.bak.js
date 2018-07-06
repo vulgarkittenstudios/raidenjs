@@ -40,13 +40,9 @@ app.SetOrientation( "Portrait", () => {
   
   	if(run) {
   		win.clear();
-  		
-  		let c = new raiden.physics.circle(100, 50, 40);
-  		c.draw(win.ctx, 'green');
   	}
 	});
 
 
  }, 50);
 });
-
